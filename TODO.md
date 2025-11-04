@@ -1,0 +1,5 @@
+- [x] Update package.json to add missing dependencies: express, @types/express, class-variance-authority, tailwind-merge, embla-carousel-react
+- [x] Fix implicit any types in server/vite.ts
+- [x] Update UI components (badge, button, etc.) to use class-variance-authority for variants
+- [ ] Run npm install
+- [ ] Run npm run build to verify fixes
