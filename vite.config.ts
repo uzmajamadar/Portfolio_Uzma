@@ -19,8 +19,8 @@ export default defineConfig({
   },
 
   build: {
-    // Output your frontend build to dist/public (for serving via Express)
-    outDir: path.resolve(__dirname, "dist/public"),
+    // Output your frontend build to dist
+    outDir: "dist",
     emptyOutDir: true,
   },
 
