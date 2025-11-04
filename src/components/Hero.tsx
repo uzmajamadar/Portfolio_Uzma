@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Send } from "lucide-react";
+import heroBg from "@assets/generated_images/Hero_background_workspace_image_c8b57935.png";
 
 const Hero = () => {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -25,8 +26,7 @@ const Hero = () => {
       id="hero"
       className="relative w-full h-screen flex justify-center items-center bg-cover bg-center"
       style={{
-        backgroundImage:
-          "url('/attached_assets/generated_images/Hero_background_workspace_image_c8b57935.png')",
+        backgroundImage: `url(${heroBg})`,
       }}
     >
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
