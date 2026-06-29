@@ -1,65 +1,25 @@
-import { Card } from "@/components/ui/card";
-import { BrainCircuit, Code2, Server, Cloud, Bot, GitBranch , BarChart } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
-const skillCategories = [
+const skillGroups = [
   {
-    title: "Artificial Intelligence & Machine Learning",
-    icon: BrainCircuit,
-    skills: [
-      "Python", "Scikit-learn", "TensorFlow", "PyTorch",
-      "Deep Learning", "Computer Vision", "NLP",
-      "Large Language Models (LLMs)", "LangChain", "RAG Systems",
-      
-    ],
-  },
-  
-  {
-    title: "Frontend Development (Fundamentals)",
-    icon: Code2,
-    skills: [
-      "React", "Next.js", "TypeScript",
-      "Tailwind CSS", "Responsive Layouts",
-      "Functional UI Building",
-      "Component Design", "State Management"
-    ],
+    title: "Languages",
+    skills: ["Python", "Java", "JavaScript", "TypeScript", "SQL"],
   },
   {
-    title: "Backend & APIs",
-    icon: Server,
-    skills: [
-      "Node.js", "Flask", "FastAPI",
-      "RESTful API Development",
-      "PostgreSQL", "MongoDB", "SQLAlchemy",
-      "Authentication", "API Integration"
-    ],
+    title: "AI & Data",
+    skills: ["TensorFlow", "Scikit-learn", "PyTorch", "LangChain", "LLMs", "RAG", "NLP"],
   },
   {
-    title: "Cloud, DevOps & Deployment",
-    icon: Cloud,
-    skills: [
-      "Render", "Vercel", "Netlify",
-      "Docker", "CI/CD (GitHub Actions)",
-      "Git & Version Control"
-    ],
+    title: "Frontend",
+    skills: ["React", "Next.js", "Tailwind CSS"],
   },
   {
-    title: "Generative AI & Automation",
-    icon: Bot,
-    skills: [
-      "Prompt Engineering", "LangChain", "Gemini API", "OpenAI",
-      "Agentic AI Systems", "RAG Pipelines",
-      "Intelligent Task Automation", "AI Integration"
-    ],
+    title: "Backend",
+    skills: ["Node.js", "FastAPI", "Flask", "PostgreSQL", "MongoDB"],
   },
   {
-    title: "Creative & Analytical Mindset",
-    icon: GitBranch,
-    skills: [
-      "Problem-Solving", "Research",
-      "AI-driven Product Building",
-      "Scalability", "Usability", "Innovation"
-    ],
+    title: "Cloud & Tools",
+    skills: ["Docker", "Git", "GitHub Actions", "Vercel", "Render"],
   },
 ];
 
@@ -71,42 +31,29 @@ export default function Skills() {
           className="text-4xl lg:text-5xl font-serif font-bold text-center mb-16"
           data-testid="text-skills-heading"
         >
-          Skills & Expertise
+          Skills
         </h2>
 
-         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {skillCategories.map((category, categoryIndex) => {
-            const Icon = category.icon;
-            const isLast = categoryIndex === skillCategories.length - 1;
-            return (
-              <Card
-                key={categoryIndex}
-                className={`p-6 hover-elevate transition-all flex flex-col ${
-                  isLast ? "md:col-span-2 lg:col-span-1 lg:col-start-2" : ""
-                }`}
-                data-testid={`card-skill-category-${categoryIndex}`}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-md bg-primary/10">
-                    <Icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold">{category.title}</h3>
-                </div>
-                <div className="flex-grow flex flex-wrap gap-2 mt-auto">
-                  {category.skills.map((skill, skillIndex) => (
-                    <Badge
-                      key={skillIndex}
-                      variant="secondary"
-                      className="text-sm"
-                      data-testid={`skill-${categoryIndex}-${skillIndex}`}
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </Card>
-            );
-          })}
+        <div className="max-w-4xl mx-auto space-y-8">
+          {skillGroups.map((group, groupIndex) => (
+            <div key={groupIndex}>
+              <h3 className="text-lg font-semibold text-muted-foreground mb-3">
+                {group.title}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {group.skills.map((skill, skillIndex) => (
+                  <Badge
+                    key={skillIndex}
+                    variant="secondary"
+                    className="text-sm px-4 py-1.5"
+                    data-testid={`skill-${groupIndex}-${skillIndex}`}
+                  >
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
