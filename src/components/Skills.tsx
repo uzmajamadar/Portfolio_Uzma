@@ -13,15 +13,7 @@ const skillCategories = [
       
     ],
   },
-  {
-    title: "Data Science & Analytics",
-    icon: BarChart,
-    skills: [
-      "Pandas", "NumPy", "Matplotlib", "Seaborn", "Plotly", "Power BI", "Tableau",
-      "Data Cleaning", "Exploratory Data Analysis (EDA)", "Feature Engineering",
-      "Statistical Modeling", "SQL", "ETL Pipelines", "Data Visualization", "Model Evaluation"
-    ],
-  },
+  
   {
     title: "Frontend Development (Fundamentals)",
     icon: Code2,

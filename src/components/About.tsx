@@ -1,16 +1,14 @@
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import profileImage from "@assets/generated_images/uzma id1.jpg";
 
-export default function About() {
-  const achievements = [
-    
-    { year: "2025", title: "Software Engineer Inter at DK Techno's" },
-    { year: "2025", title: "Oracle Data Science Professional"},
-    { year: "2024", title: "Deep Learning Certification" },
-    { year: "2023", title: "Data Analytics(Cisco) Certification" },
-  ];
+const timeline = [
+  { emoji: "🎓", title: "B.Tech Artificial Intelligence & Data Science" },
+  { emoji: "🏢", title: "Software Engineer Intern \u2013 DK Techno's" },
+  { emoji: "🏆", title: "Oracle Data Science Professional" },
+  { emoji: "📜", title: "Deep Learning Specialization" },
+];
 
+export default function About() {
   return (
     <section id="about" className="py-24 lg:py-32 bg-muted/30">
       <div className="container mx-auto px-6">
@@ -33,19 +31,19 @@ export default function About() {
 
           <div className="space-y-6">
             <p className="text-lg text-foreground" data-testid="text-bio-1">
-              I’m a creative developer and design engineer passionate about crafting intelligent, user-focused digital experiences. With hands-on experience in AI, machine learning, and full-stack development, I love transforming ideas into products that blend logic, creativity, and real-world impact.
+              I'm a Software Engineer with experience building AI-powered applications, scalable backend systems, and modern web platforms. My work spans machine learning, generative AI, full-stack development, and cloud deployment.
             </p>
             <p
               className="text-lg text-muted-foreground"
               data-testid="text-bio-2"
             >
-              I’m driven by curiosity, design thinking, and the belief that technology should not just work — it should think.
+              I enjoy designing products that combine strong engineering principles with practical business value — from training deep learning models to architecting RESTful APIs and building responsive frontends.
             </p>
             <p
               className="text-lg text-muted-foreground"
               data-testid="text-bio-3"
             >
-              Currently, I’m focused on integrating AI into real-world solutions that make experiences smarter, faster, and more human.
+              Currently, I'm focused on integrating AI into real-world solutions that make experiences smarter, faster, and more human.
             </p>
 
             <div className="pt-6">
@@ -53,27 +51,22 @@ export default function About() {
                 className="text-xl font-semibold mb-4"
                 data-testid="text-achievements-heading"
               >
-                Key Milestones
+                Timeline
               </h3>
               <div className="space-y-3">
-                {achievements.map((achievement, index) => (
+                {timeline.map((item, index) => (
                   <Card
                     key={index}
                     className="p-4 hover-elevate transition-all"
                     data-testid={`card-achievement-${index}`}
                   >
                     <div className="flex items-center gap-4">
-                      <Badge
-                        variant="secondary"
-                        data-testid={`badge-year-${index}`}
-                      >
-                        {achievement.year}
-                      </Badge>
+                      <span className="text-xl">{item.emoji}</span>
                       <span
-                        className="text-sm"
+                        className="text-sm font-medium"
                         data-testid={`text-achievement-${index}`}
                       >
-                        {achievement.title}
+                        {item.title}
                       </span>
                     </div>
                   </Card>
