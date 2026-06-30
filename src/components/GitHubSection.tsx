@@ -5,7 +5,7 @@ import { Github, ExternalLink, GitFork, Star, BookOpen } from "lucide-react";
 const highlights = [
   {
     icon: BookOpen,
-    label: "15+ Repositories",
+    label: "12+ Repositories",
     description: "Across AI, full-stack, and open-source projects",
   },
   {
