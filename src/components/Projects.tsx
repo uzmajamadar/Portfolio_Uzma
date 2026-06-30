@@ -10,27 +10,26 @@ import {
 import { ExternalLink, Github, ListChecks } from "lucide-react";
 import project1 from "@assets/generated_images/Project_1_dashboard_app_2b0bdefd.jpg";
 import project2 from "@assets/generated_images/Project_2_ecommerce_site_b408a076.jpg";
-import project3 from "@assets/generated_images/Project_3_mobile_app_63d368c9.png";
+import regulensImg from "@assets/generated_images/regulens_dashboard.png";
 import project4 from "@assets/generated_images/Project_4_task_manager_481fa7a0.png";
 import project5 from "@assets/generated_images/Project_5_social_platform_96d33c6a.png";
 
 const featuredProjects = [
   {
-    title: "CareWatch – AI Health Monitoring System",
+    title: "ReguLens – AI Compliance Automation Platform",
     description:
-      "AI-powered elderly monitoring platform with real-time activity tracking, anomaly detection, and emergency alerts.",
-    image: project3,
-    tags: ["Python", "TensorFlow", "React", "LangChain", "FAISS", "Node.js", "FastAPI"],
+      "AI-powered compliance automation platform to analyze enterprise documents against GDPR, HIPAA, SOC 2, ISO 27001, and PCI-DSS using LLMs and Retrieval-Augmented Generation (RAG).",
+    image: regulensImg,
+    tags: ["Python", "React", "FastAPI", "LangChain", "FAISS", "PostgreSQL", "JWT"],
     highlights: [
-      "LSTM-based fall detection",
-      "LangChain + FAISS RAG assistant",
-      "FastAPI backend",
-      "React dashboard",
-      "Real-time alerts",
+      "Document intelligence pipeline with PDF processing & FAISS semantic retrieval",
+      "AI-based compliance scoring, evidence extraction & remediation recommendations",
+      "End-to-end review workflow with RBAC (Admin, Manager, Reviewer, Employee)",
+      "Audit logs, document versioning & automated email notifications",
+      "Scalable full-stack: React, FastAPI, PostgreSQL, JWT auth & REST APIs",
     ],
-    liveLink:
-      "https://calm-wildcat-bc5.notion.site/CAREWATCH-AI-Powered-Elderly-Behaviour-Monitoring-Dashboard-25ddc3b2cfc280ab9a6bec23ab8df203",
-    githubLink: "#",
+    liveLink: "#",
+    githubLink: "https://github.com/uzmajamadar/ReguLens-Intelligent-Compliance-Auditor",
     linkLabel: "Case Study",
   },
   {
