@@ -3,23 +3,23 @@ import { Badge } from "@/components/ui/badge";
 const skillGroups = [
   {
     title: "Languages",
-    skills: ["Python", "Java", "JavaScript", "TypeScript", "SQL"],
+    skills: ["Python", "Java", "JavaScript", "SQL"],
   },
   {
     title: "AI & Data",
-    skills: ["TensorFlow", "Scikit-learn", "PyTorch", "LangChain", "LLMs", "RAG", "NLP"],
+    skills: ["Scikit-learn", "LangChain", "LLMs", "RAG", "NLP"],
   },
   {
     title: "Frontend",
-    skills: ["React", "Next.js", "Tailwind CSS"],
+    skills: ["React", "HTML/CSS"],
   },
   {
     title: "Backend",
-    skills: ["Node.js", "FastAPI", "Flask", "PostgreSQL", "MongoDB"],
+    skills: ["FastAPI", "Flask", "PostgreSQL", "MongoDB"],
   },
   {
     title: "Cloud & Tools",
-    skills: ["Docker", "Git", "GitHub Actions", "Vercel", "Render"],
+    skills: ["Git", "Vercel", "Render"],
   },
 ];
 
